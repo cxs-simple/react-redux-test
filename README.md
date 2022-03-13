@@ -59,3 +59,16 @@
           {key: xxxxxAction} // 映射操作状态的方法
         )(UI组件)
       - 在UI组件中通过this.props.xxxxxx读取和操作状态
+
+## 六. 求和案例_react-redux数据共享版
+  1. 定义一个Person组件，和Count组件通过redux共享数据
+  2. 为Person组件编写：reducer、action，配置constant常量
+  3. 重点：Person的reducer和Count的reducer要使用combineReducers进行合并，合并后的总状态是一个对象
+  4. 交给store的是总reducer对象，注意在组件中取出状态时，要“取到位”
+
+## 七. 求和案例_react-redux开发者工具的使用
+  1. Chrome应用商店添加Redux DevTools扩展程序
+  2. 安装redux开发者工具依赖：yarn add redux-devtools-extension
+  3. store.js中进行配置
+    - import {composeWithDevTools} from 'redux-devtools-extension'
+    - const store = createStroe(allReducer, composeWithDevTools()applyMiddleware(thunk))
