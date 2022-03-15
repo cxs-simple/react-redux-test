@@ -74,5 +74,5 @@
     - const store = createStroe(allReducer, composeWithDevTools()applyMiddleware(thunk))
 
 ## 八. 求和案例_react-redux最终版
-  1. 所有变量名字要规范，尽量触发对象的间歇性失
+  1. 所有变量名字要规范，尽量触发对象的简写方式
   2. reducers文件夹中，编写index.js专门用于汇总并暴露所有的reducer
